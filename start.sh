@@ -37,13 +37,13 @@ echo -e "${S1}setting up${S1}"
 bash setup.sh
 cd
 echo -e "${S3}installing termux black${S3}"
-git clone https://github.com/Hax4us/TermuxBlack
-cd TermuxBlack
-cp -r * $HOME
+cd
+wget wget https://github.com/Hax4us/TermuxBlack/raw/master/install.sh
 chmod +x install.sh
-bash install.sh
-echo -e "${S2}checking update${S2}"
-git clone https://gitlab.com/kalilinux/nethunter/build-scrip
+echo -e "${S4}setting up${S4}"
+bash install.sh -i
+echo -e "${S2}installing nethunter${S2}"
+wget https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/raw/master/nethunter-rootless/install-nethunter-termux
 chmod +x install-nethunter-termux
 echo -e "${S5}installing nethunter${S5}"
 ./install-nethunter-termux
