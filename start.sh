@@ -21,7 +21,7 @@ apt install git
 echo -e "${S6}checking wget${S6}"
 apt install wget
 echo -e "${S1}checking ruby${S1}"
-apt insta ruby
+apt install ruby
 echo -e "${S2}checking figlet${S2}"
 apt install figlet
 echo -e "${S3}checking lolcat${S3}"
