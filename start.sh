@@ -8,9 +8,6 @@ S5="\033[1;35m" B5="\033[1;45m"
 S6="\033[1;36m" B6="\033[1;46m"
 S7="\033[1;37m" B7="\033[1;47m"
 R0="\033[00m"   R1="\033[1;00m"
-read -p "do you want to start y/n : " start
-if [ "$start" = y ]
-then
 termux-setup-storage
 echo -e "${S3}checking update${S3}"
 apt update
@@ -30,12 +27,27 @@ echo -e "${S4}checking python${S4}"
 apt install python
 echo -e "${S5}checking python2${S5}"
 apt install python2
-echo -e "${S6}installing ts-console${S6}"
-git clone https://github.com/nepalese-noob/tsconsole
-cd tsconsole
-echo -e "${S1}setting up${S1}"
-bash setup.sh
-cd
+read -p "do you want to install TSconsole?: " ts
+if [ "$ts" = y ] then
+
+        if [[ -d "/data/data/com.termux/files/homeTSconsole-framework" ]]; then
+            echo "file exists"
+        else
+            echo "file not found"
+            echo -e "${S6}installing ts-console${S6}"
+            git clone https://github.com/nepalese-noob/tsconsole
+            cd tsconsole
+            echo -e "${S1}setting up${S1}"
+            bash setup.sh
+            cd
+        fi
+fi
+
+
+
+
+
+
 echo -e "${S3}installing termux black${S3}"
 cd
 wget wget https://github.com/Hax4us/TermuxBlack/raw/master/install.sh
