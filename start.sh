@@ -20,8 +20,10 @@ echo -e "${S4}checking git${S4}"
 apt install git
 echo -e "${S6}checking wget${S6}"
 apt install wget
-echo -e "${S1}checking ruby${S1}"
+echo -e "${S6}checking ruby${S6}"
 apt install ruby
+echo -e "${S7}checking ruby${S7}"
+apt install gnugp -y
 echo -e "${S2}checking figlet${S2}"                                                                                                                                              apt install figlet
 echo -e "${S3}checking lolcat${S3}"
 gem install lolcat
@@ -59,7 +61,7 @@ else
                 wget https://github.com/Hax4us/TermuxBlack/raw/master/install.sh
                 echo -e "${S4}${S4}"
                 chmod +x install.sh
-                bash install.sh
+                bash install.sh -i
                 cd
                 echo -e "${S3}${S3}"
                 echo -e "${S6}installed${S6}"
@@ -70,7 +72,7 @@ if [[ -d "/data/data/com.termux/files/home/T-Header" ]]; then
         echo -e "${S2}T-Header is installed${S2}"
 else
         read -p "do you want to install T-Header? y/n : " theader
-        if [ "$theader" = y]; then
+        if [ "$theader" = "y"]; then
                 echo -e "${S6}installing T-Header${S6}"
                 cd
                 "${S4}${S4}"
