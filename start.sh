@@ -86,7 +86,7 @@ if [[ -d "/data/data/com.termux/files/home/kali" ]]; then
         echo -e "${S2}Nethunter is installed${S2}"
 else
         read -p "do you want to install Nethunter? y/n : " nh
-        if [ "$nh" = y]; then
+        if [ "$nh" = "y" ]; then
                 echo -e "${S6}Connecting Nethunter${S6}"
                 wget https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/raw/master/nethunter-rootless/install-nethunter-termux
                 chmod +x install-nethunter-termux
