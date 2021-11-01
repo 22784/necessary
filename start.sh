@@ -22,9 +22,10 @@ echo -e "${S6}checking wget${S6}"
 apt install wget -y
 echo -e "${S6}checking ruby${S6}"
 apt install ruby -y
-echo -e "${S7}checking ruby${S7}"
+echo -e "${S7}checking gnugp${S7}"
 apt install gnugp -y
-echo -e "${S2}checking figlet${S2}"                                                                                                                                              apt install figlet
+echo -e "${S2}checking figlet${S2}"
+apt install figlet
 echo -e "${S3}checking lolcat${S3}"
 gem install lolcat
 echo -e "${S4}checking python${S4}"
