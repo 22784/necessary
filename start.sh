@@ -1,4 +1,5 @@
 #!/bin/bash
+
 S0="\033[1;30m" B0="\033[1;40m"
 S1="\033[1;31m" B1="\033[1;41m"
 S2="\033[1;32m" B2="\033[1;42m"
@@ -7,9 +8,11 @@ S4="\033[1;34m" B4="\033[1;44m"
 S5="\033[1;35m" B5="\033[1;45m"
 S6="\033[1;36m" B6="\033[1;46m"
 S7="\033[1;37m" B7="\033[1;47m"
-R0="\033[00m"   R1="\033[1;00m"
+R0="\033[00m" R1="\033[1;00m"
+echo -e "${S5}${S5}"
 termux-setup-storage
 echo -e "${S3}checking update${S3}"
+echo -e "${S4}${S4}"
 apt update
 echo -e "${S5}checking upgrades${S5}"
 apt upgrade
@@ -19,53 +22,74 @@ echo -e "${S6}checking wget${S6}"
 apt install wget
 echo -e "${S1}checking ruby${S1}"
 apt install ruby
-echo -e "${S2}checking figlet${S2}"
-apt install figlet
+echo -e "${S2}checking figlet${S2}"                                                                                                                                              apt install figlet
 echo -e "${S3}checking lolcat${S3}"
 gem install lolcat
 echo -e "${S4}checking python${S4}"
 apt install python
 echo -e "${S5}checking python2${S5}"
 apt install python2
-read -p "do you want to install TSconsole?: " ts
-if [ "$ts" = y ] then
 
-        if [[ -d "/data/data/com.termux/files/homeTSconsole-framework" ]]; then
-            echo "file exists"
-        else
-            
-            echo -e "${S6}installing ts-console${S6}"
-            git clone https://github.com/nepalese-noob/tsconsole
-            cd tsconsole
-            echo -e "${S1}setting up${S1}"
-            bash setup.sh
-            cd
-            echo "Target completed"
+if [[ -d "$PREFIX/share/TSconsole-framework" ]]; then
+        echo -e "${S2}Tsconsole is installed${S2}"
+else
+        read -p "do you want to install TSconsole? y/n : " tsconsole
+        if [ "$tsconsole" = "y" ]; then
+                echo -e "${S6}installing ts-console${S6}"
+                cd
+                echo -e "${S7}${S7}"
+                git clone https://github.com/nepalese-noob/tsconsole
+                cd tsconsole
+                echo -e "${S1}setting up${S1}"
+                bash setup.sh
+                cd
+                echo -e "${S5}${S5}"
+                echo "Target completed"
         fi
-else 
-echo""
 fi
 
-
-
-
-
-
-echo -e "${S3}installing termux black${S3}"
-cd
-wget wget https://github.com/Hax4us/TermuxBlack/raw/master/install.sh
-chmod +x install.sh
-echo -e "${S4}setting up${S4}"
-bash install.sh -i
-echo -e "${S2}installing nethunter${S2}"
-wget https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/raw/master/nethunter-rootless/install-nethunter-termux
-chmod +x install-nethunter-termux
-echo -e "${S5}installing nethunter${S5}"
-./install-nethunter-termux
-echo -e "${S6}installing t-header${S6}"
-git clone https://github.com/remo7777/T-Header
-cd T-Header
-bash t-header.sh
+if [[ -f "/data/data/com.termux/files/home/termuxblack.key" ]]; then
+        echo -e "${S2}TermuxBlack is installed${S2}"
 else
-exit
+        read -p "do you want to install TermuxBlack? y/n : " tblack
+        if [ "$tblack" = "y" ]; then
+                echo -e "${S6}installing Termux-Black${S6}"
+                cd
+                echo -e "${S5}${S5}"
+                wget https://github.com/Hax4us/TermuxBlack/raw/master/install.sh
+                echo -e "${S4}${S4}"
+                chmod +x install.sh
+                bash install.sh
+                cd
+                echo -e "${S3}${S3}"
+                echo -e "${S6}installed${S6}"
+        fi
+fi
+
+if [[ -d "/data/data/com.termux/files/home/T-Header" ]]; then
+        echo -e "${S2}T-Header is installed${S2}"
+else
+        read -p "do you want to install T-Header? y/n : " theader
+        if [ "$theader" = y]; then
+                echo -e "${S6}installing T-Header${S6}"
+                cd
+                "${S4}${S4}"
+                git clone https://github.com/remo7777/T-Header
+                cd T-Header
+                bash t-header.sh
+                cd
+        fi
+fi
+
+if [[ -d "/data/data/com.termux/files/home/kali" ]]; then
+        echo -e "${S2}Nethunter is installed${S2}"
+else
+        read -p "do you want to install Nethunter? y/n : " nh
+        if [ "$nh" = y]; then
+                echo -e "${S6}Connecting Nethunter${S6}"
+                wget https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/raw/master/nethunter-rootless/install-nethunter-termux
+                chmod +x install-nethunter-termux
+                echo -e "${S5}installing nethunter${S5}"
+                ./install-nethunter-termux
+        fi
 fi
