@@ -75,7 +75,6 @@ else
         if [ "$theader" = "y"]; then
                 echo -e "${S6}installing T-Header${S6}"
                 cd
-                "${S4}${S4}"
                 git clone https://github.com/remo7777/T-Header
                 cd T-Header
                 bash t-header.sh
