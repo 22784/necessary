@@ -43,7 +43,7 @@ cp -r * $HOME
 chmod +x install.sh
 bash install.sh
 echo -e "${S2}checking update${S2}"
-wget https://gitlab.com/kalilinux/nethunter/build-scrip>
+ wget https://gitlab.com/kalilinux/nethunter/build-scrip>
 chmod +x install-nethunter-termux
 echo -e "${S5}installing nethunter${S5}"
 ./install-nethunter-termux
