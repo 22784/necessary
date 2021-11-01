@@ -72,7 +72,7 @@ if [[ -d "/data/data/com.termux/files/home/T-Header" ]]; then
         echo -e "${S2}T-Header is installed${S2}"
 else
         read -p "do you want to install T-Header? y/n : " theader
-        if [ "$theader" = "y"]; then
+        if [ "$theader" = "y" ]; then
                 echo -e "${S6}installing T-Header${S6}"
                 cd
                 git clone https://github.com/remo7777/T-Header
