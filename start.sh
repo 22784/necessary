@@ -41,6 +41,8 @@ if [ "$ts" = y ] then
             bash setup.sh
             cd
         fi
+else 
+echo""
 fi
 
 
