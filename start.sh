@@ -33,13 +33,14 @@ if [ "$ts" = y ] then
         if [[ -d "/data/data/com.termux/files/homeTSconsole-framework" ]]; then
             echo "file exists"
         else
-            echo "file not found"
+            
             echo -e "${S6}installing ts-console${S6}"
             git clone https://github.com/nepalese-noob/tsconsole
             cd tsconsole
             echo -e "${S1}setting up${S1}"
             bash setup.sh
             cd
+            echo "Target completed"
         fi
 else 
 echo""
