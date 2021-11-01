@@ -1,6 +1,6 @@
 #!/bin/bash
 cd
-rm necessary
+rm -rf necessary
 git clone https://github.com/nepalese-noob/necessary
 cd necessary
 bash start.sh
