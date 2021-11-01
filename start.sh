@@ -19,16 +19,16 @@ apt upgrade
 echo -e "${S4}checking git${S4}"
 apt install git
 echo -e "${S6}checking wget${S6}"
-apt install wget
+apt install wget -y
 echo -e "${S6}checking ruby${S6}"
-apt install ruby
+apt install ruby -y
 echo -e "${S7}checking ruby${S7}"
 apt install gnugp -y
 echo -e "${S2}checking figlet${S2}"                                                                                                                                              apt install figlet
 echo -e "${S3}checking lolcat${S3}"
 gem install lolcat
 echo -e "${S4}checking python${S4}"
-apt install python
+apt install python -y
 echo -e "${S5}checking python2${S5}"
 apt install python2
 
@@ -43,7 +43,7 @@ else
                 git clone https://github.com/nepalese-noob/tsconsole
                 cd tsconsole
                 echo -e "${S1}setting up${S1}"
-                bash setup.sh
+                bash setup.sh -y
                 cd
                 echo -e "${S5}${S5}"
                 echo "Target completed"
