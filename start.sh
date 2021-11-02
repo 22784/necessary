@@ -91,6 +91,8 @@ else
                 echo -e "${S6}Connecting Nethunter${S6}"
                 cd
                 curl -LO https://raw.githubusercontent.com/Hax4us/Nethunter-In-Termux/master/kalinethunter
+                chmod +x kalinethunter
+                ./kalinethunter
                 #rm -rf kalifs-arm64-full.tar.xz.st
                 #rm -rf kalifs-arm64-full.tar.xz
                 #rm install-nethunter-termux
