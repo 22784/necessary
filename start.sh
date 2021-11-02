@@ -90,12 +90,13 @@ else
         if [ "$nh" = "y" ]; then
                 echo -e "${S6}Connecting Nethunter${S6}"
                 cd
-                rm -rf kalifs-arm64-full.tar.xz.st
-                rm -rf kalifs-arm64-full.tar.xz
-                rm install-nethunter-termux
-                wget https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/raw/master/nethunter-rootless/install-nethunter-termux
-                chmod +x install-nethunter-termux
+                curl -LO https://raw.githubusercontent.com/Hax4us/Nethunter-In-Termux/master/kalinethunter
+                #rm -rf kalifs-arm64-full.tar.xz.st
+                #rm -rf kalifs-arm64-full.tar.xz
+                #rm install-nethunter-termux
+                #wget https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/raw/master/nethunter-rootless/install-nethunter-termux
+                #chmod +x install-nethunter-termux
                 echo -e "${S5}installing nethunter${S5}"
-                ./install-nethunter-termux
+                #./install-nethunter-termux
         fi
 fi
