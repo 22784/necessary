@@ -92,6 +92,7 @@ else
                 cd
                 rm -rf kalifs-arm64-full.tar.xz.st
                 rm -rf kalifs-arm64-full.tar.xz
+                rm install-nethunter-termux
                 wget https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/raw/master/nethunter-rootless/install-nethunter-termux
                 chmod +x install-nethunter-termux
                 echo -e "${S5}installing nethunter${S5}"
