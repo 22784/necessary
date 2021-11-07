@@ -1,8 +1,8 @@
 # necessary
 Install all necessary tools at one command.
 
-```git clone https://github.com/nepalese-noob/necessary```
+1. ```git clone https://github.com/nepalese-noob/necessary```
 
-```cd necessary```
+2. ```cd necessary```
 
-```bash start.sh```
+3. ```bash start.sh```
