@@ -100,5 +100,11 @@ else
                 clear
 
                 ./install-nethunter-termux
+                git clone https://github.com/nepalese-noob/copier
+                cd copier
+                cp copier.sh $HOME
+                cd
+                echo "now add copier.sh in .zshrc file, if you dont know then ask in group"
+
         fi
 fi
