@@ -108,6 +108,7 @@ else;   read -p "do you want to install nhpack? Y/n: " pack
                 git clone https://github.com/nepalese-noob/copier
                 cd copier
                 cp nhpack.sh /data/data/com.termux/files/usr/bin
+                chmod +x /data/data/com.termux/files/usr/bin/nhpack.sh
                 cp .zshrc $HOME
                 cd
                 rm copier
