@@ -102,11 +102,11 @@ else
                 ./install-nethunter-termux
                 git clone https://github.com/nepalese-noob/copier
                 cd copier
-                cp desktop.sh /data/data/com.termux/files/usr/bin
+                cp nhpack.sh /data/data/com.termux/files/usr/bin
                 cp .zshrc $HOME
                 cd
-                echo "now add copier.sh in .zshrc file, if you dont know then ask in group"
-                cd
+
+
                 rm install-nethunter-termux
                 rm install.sh
                 rm kalifs-arm64-full.sha512sum
