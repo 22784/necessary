@@ -105,8 +105,6 @@ else
                 cp nhpack.sh /data/data/com.termux/files/usr/bin
                 cp .zshrc $HOME
                 cd
-
-
                 rm install-nethunter-termux
                 rm install.sh
                 rm kalifs-arm64-full.sha512sum
