@@ -100,11 +100,17 @@ else
                 clear
 
                 ./install-nethunter-termux
+        fi
+elif [[ -d "data/data/com.termux/files/usr/bin/nhpack.sh" ]]; then
+        echo -e "${S2}nhpack is installed${S2}"
+else;   read -p "do you want to install nhpack? Y/n: " pack
+        if [ "$pack" = "y" ]; then
                 git clone https://github.com/nepalese-noob/copier
                 cd copier
                 cp nhpack.sh /data/data/com.termux/files/usr/bin
                 cp .zshrc $HOME
                 cd
+                rm copier
                 rm install-nethunter-termux
                 rm install.sh
                 rm kalifs-arm64-full.sha512sum
