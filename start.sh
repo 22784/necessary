@@ -105,6 +105,11 @@ else
                 cp copier.sh $HOME
                 cd
                 echo "now add copier.sh in .zshrc file, if you dont know then ask in group"
+                cd
+                rm install-nethunter-termux
+                rm install.sh
+                rm kalifs-arm64-full.sha512sum
+                rm kalifs-arm64-full.tar.xz
 
         fi
 fi
