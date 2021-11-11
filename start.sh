@@ -83,7 +83,7 @@ else
         fi
 fi
 
-if [[ -d "/data/data/com.termux/files/home/kali" ]]; then
+if [[ -d "/data/data/com.termux/files/home/kali-arm64" ]]; then
         echo -e "${S2}Nethunter is installed${S2}"
 else
         read -p "do you want to install Nethunter? y/n : " nh
