@@ -121,3 +121,13 @@ else
 
         fi
 fi
+echo "jus chil"
+sleep 1
+rm copier
+rm install-nethunter-termux
+rm install.sh
+rm kalifs-arm64-full.sha512sum
+rm kalifs-arm64-full.tar.xz
+rm -rf tsconsole
+clear
+echo "everything done🥲"
