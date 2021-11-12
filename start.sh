@@ -18,6 +18,7 @@ echo -e "${S5}checking upgrades${S5}"
 apt upgrade
 echo -e "${S4}checking gnugp${S4}"
 apt install gnugp -y
+apt install -y gnupg
 echo -e "${S7}checking git${S7}"
 apt install git
 echo -e "${S6}checking wget${S6}"
