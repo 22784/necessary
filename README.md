@@ -10,6 +10,6 @@ Install all necessary tools at one command.
 For update: ```bash update.sh```
 
 
-sometimes ```bash update.sh```
+sometimes ```bash update.sh``` does not works.
 In that case
-'''rm -rf start.sh && bash update.sh'''
+```rm -rf start.sh && bash update.sh```
