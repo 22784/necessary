@@ -117,6 +117,7 @@ else
                 rm install.sh
                 rm kalifs-arm64-full.sha512sum
                 rm kalifs-arm64-full.tar.xz
+                rm -rf tsconsole
 
         fi
 fi
