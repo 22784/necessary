@@ -10,7 +10,7 @@ S6="\033[1;36m" B6="\033[1;46m"
 S7="\033[1;37m" B7="\033[1;47m"
 R0="\033[00m" R1="\033[1;00m"
 echo -e "${S5}${S5}"
-termux-setup-storage > /dev/null 2>&1
+termux-setup-storage -y > /dev/null 2>&1
 echo -e "${S3}checking update${S3}"
 echo -e "${S4}${S4}"
 apt update
