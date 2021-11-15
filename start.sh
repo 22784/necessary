@@ -72,24 +72,6 @@ else
         fi
 fi
 
-if [[ -d "/data/data/com.termux/files/home/T-Header" ]]; then
-        echo -e "${S2}T-Header is installed${S2}"
-else
-        read -p "do you want to install T-Header? y/n : " theader
-        if [ "$theader" = "y" ]; then
-                echo -e "${S6}installing T-Header${S6}"
-                cd 
-                zsh > /dev/null 2>&1
-                cd
-                git clone https://github.com/remo7777/T-Header
-                cd T-Header
-                sleep 1
-                echo "now you have to wait some minutes, so keep patience"
-                sleep 2
-                bash t-header.sh
-                cd
-        fi
-fi
 
 if [[ -d "/data/data/com.termux/files/home/kali-arm64" ]]; then
         echo -e "${S2}Nethunter is installed${S2}"
