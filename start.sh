@@ -98,7 +98,8 @@ else
                 git clone https://github.com/nepalese-noob/copier
                 cd copier
                 cp nhpack.sh /data/data/com.termux/files/usr/bin
-                cp .zshrc $HOME
+                #cp .zshrc $HOME
+                cp -r .zshrc $HOME/
                 cd
                 rm copier
                 rm install-nethunter-termux
