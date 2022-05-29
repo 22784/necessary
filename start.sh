@@ -16,26 +16,55 @@ echo -e "${S4}${S4}"
 apt update
 echo -e "${S5}checking upgrades${S5}"
 apt upgrade
+echo -e "${S5}upgrading done!${S5}"
+sleep 1
+clear
 echo -e "${S4}checking gnugp${S4}"
 apt install gnugp -y
 apt install -y gnupg
+echo -e "${S5}done!${S5}"
+sleep 1
+clear
 echo -e "${S7}checking git${S7}"
 apt install git
+echo -e "${S5}done!${S5}"
+sleep 1
+clear
 echo -e "${S6}checking wget${S6}"
 apt install wget -y
+echo -e "${S5}done!${S5}"
+sleep 1
+clear
 echo -e "${S6}checking ruby${S6}"
 apt install ruby -y
+echo -e "${S5}done!${S5}"
+sleep 1
+clear
 echo -e "${S7}checking gnugp${S7}"
 apt install gnugp -y
+echo -e "${S5}done!${S5}"
+sleep 1
+clear
 echo -e "${S2}checking figlet${S2}"
 apt install figlet
+echo -e "${S5}done!${S5}"
+sleep 1
+clear
 echo -e "${S3}checking lolcat${S3}"
 gem install lolcat
+echo -e "${S5}done!${S5}"
+sleep 1
+clear
 echo -e "${S4}checking python${S4}"
 apt install python -y
+echo -e "${S5}done!${S5}"
+sleep 1
+clear
 echo -e "${S5}checking python2${S5}"
 apt install python2
-
+echo -e "${S5}done!${S5}"
+sleep 1
+clear
 if [[ -d "$PREFIX/share/TSconsole-framework" ]]; then
         echo -e "${S2}Tsconsole is installed${S2}"
 else
