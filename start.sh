@@ -172,6 +172,13 @@ else
                 cd
 
         fi
+clear
+if ! hash fish > /dev/null 2>&1; then
+read -p "do you want to install fish designing?  S3" fish
+if [ "$S3" = y ]; then
+apt install fish
+else
+echo "invilid option"
 
 fi
 echo "jus chil"
