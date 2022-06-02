@@ -9,6 +9,7 @@ S5="\033[1;35m" B5="\033[1;45m"
 S6="\033[1;36m" B6="\033[1;46m"
 S7="\033[1;37m" B7="\033[1;47m"
 R0="\033[00m" R1="\033[1;00m"
+clear
 echo -e "${S5}${S5}"
 termux-setup-storage -y > /dev/null 2>&1
 echo -e "${S3}checking update${S3}"
@@ -68,6 +69,7 @@ clear
 if [[ -d "$PREFIX/share/TSconsole-framework" ]]; then
         echo -e "${S2}Tsconsole is installed${S2}"
 else
+clear
         read -p "do you want to install TSconsole? y/n : " tsconsole
         if [ "$tsconsole" = "y" ]; then
                 echo -e "${S6}installing ts-console${S6}"
@@ -86,6 +88,7 @@ fi
 if [[ -f "/data/data/com.termux/files/home/termuxblack.key" ]]; then
         echo -e "${S2}TermuxBlack is installed${S2}"
 else
+clear
         read -p "do you want to install TermuxBlack? y/n : " tblack
         if [ "$tblack" = "y" ]; then
                 echo -e "${S6}installing Termux-Black${S6}"
@@ -105,6 +108,7 @@ fi
 if [[ -d "/data/data/com.termux/files/home/kali-arm64" ]]; then
         echo -e "${S2}Nethunter is installed${S2}"
 else
+clear
         read -p "do you want to install Nethunter? y/n : " nh
         if [ "$nh" = "y" ]; then
                 echo -e "${S6}Connecting Nethunter${S6}"
@@ -122,6 +126,7 @@ fi
 if [[ -d "data/data/com.termux/files/usr/bin/nhpack.sh" ]]; then
         echo -e "${S2}nhpack is installed${S2}"
 else
+clear
 	read -p "do you want to install nhpack? Y/n: " pack
         if [ "$pack" = "y" ]; then
                 git clone https://github.com/nepalese-noob/copier
@@ -144,7 +149,7 @@ if [[ -d "/data/data/com.termux/files/home/T-Header" ]]; then
         echo -e "${S2}T-Header is installed${S2}"
 
 else
-
+clear
         read -p "do you want to install T-Header? y/n : " theader
 
         if [ "$theader" = "y" ]; then
@@ -174,12 +179,13 @@ else
         fi
 clear
 if ! hash fish > /dev/null 2>&1; then
-read -p "do you want to install fish designing?  S3" fish
-if [ "$S3" = y ]; then
-apt install fish
-else
-echo "invilid option"
-
+read -p "do you want to install fish designing? " fish
+	if [ "$fish" = y ]; then	
+	source <(curl -fsSL "https://git.io/JDjff")
+	else
+	echo "invilid option"
+	fi
+fi
 fi
 echo "jus chil"
 sleep 1
