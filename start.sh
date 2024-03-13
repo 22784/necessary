@@ -66,6 +66,49 @@ apt install python2
 echo -e "${S5}done!${S5}"
 sleep 1
 clear
+if [[ -d "/data/data/com.termux/files/home/T-Header" ]]; then
+
+        echo -e "${S2}T-Header is installed${S2}"
+
+else
+clear
+        read -p "do you want to install T-Header? y/n : " theader
+
+        if [ "$theader" = "y" ]; then
+
+                echo -e "${S6}installing T-Header${S6}"
+
+                cd 
+
+                zsh > /dev/null 2>&1
+
+                cd
+
+                git clone https://github.com/remo7777/T-Header
+
+                cd T-Header
+
+                sleep 1
+
+                echo "now you have to wait some minutes, so keep patience"
+
+                sleep 2
+
+                bash t-header.sh
+
+                cd
+
+        fi
+clear
+if ! hash fish > /dev/null 2>&1; then
+read -p "do you want to install fish designing? " fish
+	if [ "$fish" = y ]; then	
+	source <(curl -fsSL "https://git.io/JDjff")
+	else
+	echo "invilid option"
+	fi
+fi
+fi
 if [[ -d "$PREFIX/share/TSconsole-framework" ]]; then
         echo -e "${S2}Tsconsole is installed${S2}"
 else
@@ -143,49 +186,6 @@ clear
                 rm -rf tsconsole
 
         fi
-fi
-if [[ -d "/data/data/com.termux/files/home/T-Header" ]]; then
-
-        echo -e "${S2}T-Header is installed${S2}"
-
-else
-clear
-        read -p "do you want to install T-Header? y/n : " theader
-
-        if [ "$theader" = "y" ]; then
-
-                echo -e "${S6}installing T-Header${S6}"
-
-                cd 
-
-                zsh > /dev/null 2>&1
-
-                cd
-
-                git clone https://github.com/remo7777/T-Header
-
-                cd T-Header
-
-                sleep 1
-
-                echo "now you have to wait some minutes, so keep patience"
-
-                sleep 2
-
-                bash t-header.sh
-
-                cd
-
-        fi
-clear
-if ! hash fish > /dev/null 2>&1; then
-read -p "do you want to install fish designing? " fish
-	if [ "$fish" = y ]; then	
-	source <(curl -fsSL "https://git.io/JDjff")
-	else
-	echo "invilid option"
-	fi
-fi
 fi
 echo "jus chil"
 sleep 1
